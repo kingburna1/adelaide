@@ -9,7 +9,7 @@ const FirstCardComponent = () => {
         <p className="text-green-500">
           Let's start your farming journey together!
         </p>
-        <h4 className="text-green-900 font-bold text-xl md:text-7xl text-center">
+        <h4 className="text-xl md:text-5xl font-bold max-w-xl mx-auto text-center text-green-800">
           Innovative solutions for agriculture optimal crops growth & soil
           health.
         </h4>
@@ -178,7 +178,7 @@ const FirstCardComponent = () => {
 
       </div>
 
-          <div className="flex items-center justify-center px-20">
+          <div className="flex items-center justify-center p-10">
                <p className="text-center text-green-900">we are constantly advancing our methods to prevent, minimize, and <br/> control plant diseases and pests.<span className="text-green-700 border-b-1">Explore  Our Services</span> </p>
             </div>
     </main>

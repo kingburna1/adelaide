@@ -3,6 +3,8 @@ import FirstCardComponent from "@/components/firstcard/FirstCardComponent";
 import HeroComponent from "@/components/hero/HeroComponent";
 import More1Component from "@/components/more1/More1Component";
 import NaveBarComponent from "@/components/navbar/NaveBarComponent";
+import MoreComponent from './../components/more2/MoreComponent';
+import More3Component from './../components/more3/More3Component';
 
 export default function Home() {
   return (
@@ -26,6 +28,10 @@ export default function Home() {
       <More1Component/>
 
       <FirstCardComponent/>
+
+      <div> <MoreComponent/></div>
+
+      <div > <More3Component/>   </div>
     </div>
   );
 }

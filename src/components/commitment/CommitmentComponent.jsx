@@ -49,7 +49,7 @@ const CommitmentComponent = () => {
 
       {/*  Caption */}
       <div className="mt-6 px-10 relative z-10">
-        <h4 className="text-center  text-gray-700 font-bold text-xl md:text-7xl lg:text-5xbl px-10">
+        <h4 className="text-xl md:text-5xl font-bold max-w-xl mx-auto text-center text-green-800">
           Our commitment is to produce quality crops and empower the future of food production!
         </h4>
       </div>

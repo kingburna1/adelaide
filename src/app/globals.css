@@ -35,6 +35,14 @@ body {
   font-style: normal;
 }
 
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
