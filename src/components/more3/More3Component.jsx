@@ -34,7 +34,7 @@ const More3Component = () => {
                         {/* Image */}
                         <img
                             // Note: Using a local path, ensure it's correct for your project
-                            src="/image21.jpg"
+                            src="/image28.jpg"
                             alt="Farmer carrying a crate of corn"
                             className="w-full h-full object-cover"
                         />
@@ -107,7 +107,7 @@ const More3Component = () => {
                 {/* Image */}
                 <img
                     // Note: Using a local path, ensure it's correct for your project
-                    src="/image21.jpg"
+                    src="/image29.jpg"
                     alt="Farmer carrying a crate of corn"
                     className="w-full h-full object-cover"
                 />
@@ -181,7 +181,7 @@ const More3Component = () => {
                 {/* Image */}
                 <img
                     // Note: Using a local path, ensure it's correct for your project
-                    src="/image21.jpg"
+                    src="/image30.jpg"
                     alt="Farmer carrying a crate of corn"
                     className="w-full h-full object-cover"
                 />

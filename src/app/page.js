@@ -5,6 +5,8 @@ import More1Component from "@/components/more1/More1Component";
 import NaveBarComponent from "@/components/navbar/NaveBarComponent";
 import MoreComponent from './../components/more2/MoreComponent';
 import More3Component from './../components/more3/More3Component';
+import More4Component from "@/components/more4/More4Component";
+import NewsComponent from "@/components/more5/NewsComponent";
 
 export default function Home() {
   return (
@@ -32,6 +34,9 @@ export default function Home() {
       <div> <MoreComponent/></div>
 
       <div > <More3Component/>   </div>
+
+         <div> <More4Component/>  </div>
+         `   <div> <NewsComponent/>  </div>`
     </div>
   );
 }

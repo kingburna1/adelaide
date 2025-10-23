@@ -29,9 +29,9 @@ const CommitmentComponent = () => {
           </div>
 
           {/*  Image that pops out of the parent */}
-          <div className="absolute -top-25 right-4 w-[55%] h-[130%] z-0">
+          <div className="absolute -top-45 right-4 w-[55%] h-[180%] z-0">
             <Image
-              src="/image11.png"
+              src="/image32.png"
               alt="farmer with vegetables"
               fill
               className="object-contain scale-110"
