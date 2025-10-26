@@ -23,7 +23,7 @@ const NaveBarComponent = () => {
     <div>
       <main className="backdrop-blur bg-white/20">
         {/* Top cyan bar (UNCHANGED) */}
-        <div className="flex justify-between w-full bg-cyan-400 items-center px-4">
+        <div className="flex justify-between w-full bg-green-800 items-center px-4 text-white">
           <div className="flex space-x-2 py-2 items-center">
             <p>Implementing regenerative agriculture practices!</p>
             <ul className="flex space-x-2 text-yellow-300 items-center">
@@ -56,7 +56,7 @@ const NaveBarComponent = () => {
         </div>
 
         {/* Main navbar (UNCHANGED) */}
-        <div className="w-full border-b border-white shadow-md flex items-center text-cyan-500 px-3 relative">
+        <div className="w-full border-b border-white shadow-md flex items-center text-green-800 font-semibold px-3 relative">
           {/* Logo (UNCHANGED) */}
           <ul className="flex space-x-4 items-center flex-1 p-2">
             <li>
@@ -112,7 +112,7 @@ const NaveBarComponent = () => {
                     {/* Dropdown content (APPLYING FIX HERE) */}
                     {item === "Services" && (
                       <div className="p-4 space-y-3 text-gray-700">
-                        <h4 className="font-semibold text-cyan-500 border-b pb-1">
+                        <h4 className="font-semibold text-green-800 border-b pb-1">
                           Our Services
                         </h4>
                         <ul className="space-y-2">
@@ -153,7 +153,7 @@ const NaveBarComponent = () => {
 
                     {item === "Projects" && (
                       <div className="p-4 space-y-3 text-gray-700">
-                        <h4 className="font-semibold text-cyan-500 border-b pb-1">
+                        <h4 className="font-semibold text-green-800 border-b pb-1">
                           Our Projects
                         </h4>
                         <ul className="space-y-2">
@@ -193,7 +193,7 @@ const NaveBarComponent = () => {
 
                     {item === "Insight" && (
                       <div className="p-4 space-y-3 text-gray-700">
-                        <h4 className="font-semibold text-cyan-500 border-b pb-1">
+                        <h4 className="font-semibold text-green-800 border-b pb-1">
                           Insights & Research
                         </h4>
                         <ul className="space-y-2">
@@ -233,7 +233,7 @@ const NaveBarComponent = () => {
 
                     {item === "Shop" && (
                       <div className="p-4 space-y-3 text-gray-700">
-                        <h4 className="font-semibold text-cyan-500 border-b pb-1">
+                        <h4 className="font-semibold text-green-800 border-b pb-1">
                           Shop Categories
                         </h4>
                         <ul className="space-y-2">
@@ -273,7 +273,7 @@ const NaveBarComponent = () => {
 
                     {item === "Pages" && (
                       <div className="p-4 space-y-3 text-gray-700">
-                        <h4 className="font-semibold text-cyan-500 border-b pb-1">
+                        <h4 className="font-semibold text-green-800 border-b pb-1">
                           Explore Pages
                         </h4>
                         <ul className="space-y-2">
@@ -318,7 +318,7 @@ const NaveBarComponent = () => {
 
           {/* Buttons (UNCHANGED) */}
           <div className="flex space-x-6 flex-[1] items-center justify-end">
-            <button className="flex gap-2 items-center bg-cyan-500 p-2 rounded-md text-white hover:bg-amber-400 transition-all duration-300 ease-in-out">
+            <button className="flex gap-2 items-center bg-green-800 p-2 rounded-md text-white hover:bg-amber-400 transition-all duration-300 ease-in-out">
               Get in touch <ArrowRightCircle size={20} />
             </button>
 
@@ -326,7 +326,7 @@ const NaveBarComponent = () => {
 
             <div className="relative inline-block">
               <BriefcaseConveyorBelt />
-              <div className="absolute -top-2 -right-2 bg-cyan-700 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+              <div className="absolute -top-2 -right-2 bg-green-700 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full">
                 <p>0</p>
               </div>
             </div>

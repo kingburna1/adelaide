@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import "./globals.css";
+import FooterComponent from "@/components/footer/FooterComponent";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
+      
         {children}
+        <FooterComponent />
       </body>
     </html>
   );

@@ -65,7 +65,7 @@ const FadeEffect = () => {
                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
         
                    {/* Primary Button: Explore Our Services */}
-                   <button className="flex items-center justify-center px-8 py-4 bg-cyan-500 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition duration-300 ease-in-out group">
+                   <button className="flex items-center justify-center px-8 py-4 bg-green-800 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl trasition-all duration-500 ease-in-out group">
                      Explore Our Services 
                      <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                    </button>
@@ -108,7 +108,7 @@ const FadeEffect = () => {
                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
         
                    {/* Primary Button: Explore Our Services */}
-                   <button className="flex items-center justify-center px-8 py-4 bg-cyan-500 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition duration-300 ease-in-out group">
+                   <button className="flex items-center justify-center px-8 py-4 bg-green-800 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition-all duration-300 ease-in-out group">
                      Explore Our Services 
                      <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                    </button>
@@ -153,7 +153,7 @@ const FadeEffect = () => {
                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
         
                    {/* Primary Button: Explore Our Services */}
-                   <button className="flex items-center justify-center px-8 py-4 bg-cyan-500 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition duration-300 ease-in-out group">
+                   <button className="flex items-center justify-center px-8 py-4 bg-green-800 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition duration-300 ease-in-out group">
                      Explore Our Services 
                      <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                    </button>
@@ -197,7 +197,7 @@ const FadeEffect = () => {
                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
         
                    {/* Primary Button: Explore Our Services */}
-                   <button className="flex items-center justify-center px-8 py-4 bg-cyan-500 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition duration-300 ease-in-out group">
+                   <button className="flex items-center justify-center px-8 py-4 bg-green-800 hover:bg-white text-gray-900 font-bold text-lg rounded-md shadow-xl transition duration-300 ease-in-out group">
                      Explore Our Services 
                      <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                    </button>

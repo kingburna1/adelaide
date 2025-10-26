@@ -7,12 +7,14 @@ import MoreComponent from './../components/more2/MoreComponent';
 import More3Component from './../components/more3/More3Component';
 import More4Component from "@/components/more4/More4Component";
 import NewsComponent from "@/components/more5/NewsComponent";
+import ContactSection from "@/components/thecontact/ContactSection";
+import FooterComponent from "@/components/footer/FooterComponent";
 
 export default function Home() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Hero Section */}
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-auto md:h-screen">
         <HeroComponent />
 
         {/*  Navbar positioned at the top */}
@@ -36,7 +38,10 @@ export default function Home() {
       <div > <More3Component/>   </div>
 
          <div> <More4Component/>  </div>
-         `   <div> <NewsComponent/>  </div>`
+         <div> <NewsComponent/>  </div>
+         <div> <ContactSection/> </div>
+{/* 
+         <div> <FooterComponent/> </div> */}
     </div>
   );
 }
