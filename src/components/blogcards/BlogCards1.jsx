@@ -37,7 +37,7 @@ const BlogCards1 = ({blog}) => {
             {/* Meta Info */}
             <div className="flex items-center gap-3 text-sm text-gray-600 mb-3">
               <span>September 4, 2025</span>
-              <span className="w-5 h-[1px] bg-green-600 inline-block"></span>
+              <span className="w-5 h-px bg-green-600 inline-block"></span>
               <span className="text-green-700 font-medium hover:text-green-800 cursor-pointer">
                 Nikolas Gibbons
               </span>

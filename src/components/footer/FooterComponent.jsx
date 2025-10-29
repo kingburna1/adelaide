@@ -130,7 +130,7 @@ const FooterComponent = () => {
 
       {/* FOOTER BOTTOM BORDER */}
       <div className="max-w-[1300px] mx-auto mt-8 border-t border-green-800 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Agritec. All rights reserved.
+        © {new Date().getFullYear()} Adela. All rights reserved.
       </div>
     </footer>
   );
