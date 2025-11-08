@@ -24,7 +24,7 @@ const page = () => {
 
         <section className="mt-1  grid grid-cols-1 md:grid-cols-3  gap-5 px-5 md:px-10 md:mt-30 w-full">
           <div className="col-span-1 md:col-span-2   px-3  py-2 md:py-10  h-auto">
-            <div className="flex justify-between items-cennter">
+            <div className="flex justify-between items-center">
               <div>
                 <h3>Showing 1-9 of 12 Result</h3>
               </div>

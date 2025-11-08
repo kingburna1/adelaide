@@ -9,6 +9,7 @@ import More4Component from "@/components/more4/More4Component";
 import NewsComponent from "@/components/more5/NewsComponent";
 import ContactSection from "@/components/thecontact/ContactSection";
 import FooterComponent from "@/components/footer/FooterComponent";
+import SmNavBar from "./../components/smnavbsr/SmNavBar"
 
 export default function Home() {
   return (
@@ -18,13 +19,15 @@ export default function Home() {
         <HeroComponent />
 
         {/*  Navbar positioned at the top */}
-        <div className="absolute top-0 left-0 w-full z-50">
-          <NaveBarComponent />
+        <div className="absolute top-0  left-0 w-full z-50">
+          <div className="hidden md:block"> <NaveBarComponent /></div>
+          <div  className="block md:hidden" > <SmNavBar/> </div>
+        
         </div>
       </div>
 
       {/*CommitmentComponent overlaps hero slightly */}
-      <div className="relative z-40 -mt-[30px]">
+      <div className="relative z-40 md:-mt-[30px]">
         <CommitmentComponent />
       </div>
 
@@ -35,9 +38,9 @@ export default function Home() {
 
       <div> <MoreComponent/></div>
 
-      <div > <More3Component/>   </div>
+      <div className="md:mt-27"> <More3Component/>   </div>
 
-         <div> <More4Component/>  </div>
+         <div className="hidden"> <More4Component/>  </div>
          <div> <NewsComponent/>  </div>
          <div> <ContactSection/> </div>
 {/* 
