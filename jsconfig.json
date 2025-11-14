@@ -1,7 +1,20 @@
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     }
+//   }
+// }
+
+// jsconfig.json or tsconfig.json
 {
   "compilerOptions": {
+    // This tells the compiler where to look for the alias
+    "baseUrl": ".", 
     "paths": {
-      "@/*": ["./src/*"]
+      // Defines the @/ alias to resolve to the root directory
+      "@/*": ["./*"] 
     }
   }
 }
+
