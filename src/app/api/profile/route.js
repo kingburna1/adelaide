@@ -1,5 +1,6 @@
 import clientPromise from "@/lib/mongodb";
-import { getUserFromRequest } from "@/lib/requiredAuth"; // Using the alias path
+
+import { getUserFromRequest } from "@/lib/requiredAuth"; 
 
 // IMPORT THIS LINE
 import { ObjectId } from "mongodb"; 
