@@ -1,5 +1,5 @@
 import clientPromise from "@/lib/mongodb";
-import { getUserFromRequest } from "@/lib/requireAuth";
+import { getUserFromRequest } from "./../../../lib/requiredAuth";
 
 export async function GET(req) {
   const userPayload = await getUserFromRequest(req);
