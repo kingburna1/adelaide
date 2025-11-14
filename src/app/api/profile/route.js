@@ -2,7 +2,6 @@ import clientPromise from "@/lib/mongodb";
 
 import { getUserFromRequest } from "@/lib/requiredAuth"; 
 
-// IMPORT THIS LINE
 import { ObjectId } from "mongodb"; 
 
 export async function GET(req) {
