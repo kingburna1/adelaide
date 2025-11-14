@@ -1,5 +1,8 @@
 import clientPromise from "@/lib/mongodb";
-import { getUserFromRequest } from "./../../../lib/requiredAuth";
+import { getUserFromRequest } from "@/lib/requiredAuth"; // Using the alias path
+
+// IMPORT THIS LINE
+import { ObjectId } from "mongodb"; 
 
 export async function GET(req) {
   const userPayload = await getUserFromRequest(req);
