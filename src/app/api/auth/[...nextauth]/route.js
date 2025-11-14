@@ -1,18 +1,40 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import clientPromise from "@/lib/mongodb";
 import bcrypt from "bcryptjs";
+import { connectDB } from "@/lib/mongoose";
+import User from "@/models/User";
 
 const handler = NextAuth({
   providers: [
-    // 🔹 Google Sign-in
+    // 🔹 Google Provider
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      async profile(profile) {
+        await connectDB();
+
+        // check if user already exists
+        let user = await User.findOne({ email: profile.email });
+        if (!user) {
+          user = await User.create({
+            name: profile.name,
+            email: profile.email,
+            image: profile.picture,
+            role: "user",
+          });
+        }
+        return {
+          id: user._id.toString(),
+          name: user.name,
+          email: user.email,
+          image: user.image,
+          role: user.role,
+        };
+      },
     }),
 
-    // 🔹 Email + Password Sign-in
+    // 🔹 Credentials (Email + Password)
     CredentialsProvider({
       name: "Credentials",
       credentials: {
@@ -20,10 +42,9 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const client = await clientPromise;
-        const db = client.db("adelaagri_db");
-        const user = await db.collection("users").findOne({ email: credentials.email });
+        await connectDB();
 
+        const user = await User.findOne({ email: credentials.email });
         if (!user) throw new Error("User not found");
 
         const isValid = await bcrypt.compare(credentials.password, user.password);
@@ -33,38 +54,40 @@ const handler = NextAuth({
           id: user._id.toString(),
           name: user.name,
           email: user.email,
-          role: user.role || "user",
+          role: user.role,
+          image: user.image,
         };
       },
     }),
   ],
 
-  // Custom Signin Page
+  // Custom sign-in page
   pages: {
     signIn: "/signin",
   },
 
-  // 🔥 Custom redirect logic
+  // 🔥 Callbacks for JWT & session
   callbacks: {
     async jwt({ token, user }) {
-     
       if (user) {
-        token.role = user.role || "user"; // store the role directly
+        token.id = user.id;
+        token.role = user.role;
       }
       return token;
     },
+
     async session({ session, token }) {
       if (token) {
-        session.user.role = token.role; // attach role to session
+        session.user.id = token.id;
+        session.user.role = token.role;
       }
       return session;
     },
+
     async redirect({ url, baseUrl }) {
-    
-      return baseUrl; // default redirect after sign in
+      return baseUrl;
     },
   },
-  
 
   secret: process.env.JWT_SECRET,
 });

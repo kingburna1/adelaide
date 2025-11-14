@@ -1,0 +1,53 @@
+// Connect Prisma to MySQL
+datasource db {
+  provider = "mysql"
+  url      = env("MYSQL_URL")
+}
+
+// Prisma Client generator
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Order {
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  productId   Int
+  quantity    Int       @default(1)
+  price       Float
+  total       Float
+  status      OrderStatus @default(PENDING)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // relations
+  user        User      @relation(fields: [userId], references: [id])
+  product     Product   @relation(fields: [productId], references: [id])
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  password  String?
+  image     String?
+  role      String     @default("user")
+  orders    Order[]
+}
+
+model Product {
+  id        Int       @id @default(autoincrement())
+  name      String
+  price     Float
+  stock     Int       @default(0)
+  image     String?
+  orders    Order[]
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}

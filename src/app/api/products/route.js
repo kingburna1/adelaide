@@ -1,55 +1,66 @@
-import clientPromise from "@/lib/mongodb";
+import { connectDB } from "@/lib/mongoose";// Updated import to use your utility
+import Product from '@/models/Product'; 
 
-// ✅ GET all products
+/**
+ * @method GET
+ * @description Fetches all products using Mongoose.
+ */
 export async function GET() {
   try {
-    const client = await clientPromise;
-    const db = client.db("adelaagri_db");
-    const products = await db.collection("products").find({}).toArray();
+    await connectDB(); // Use your connection function
+    
+    // Mongoose: Find all documents in the Product collection
+    const products = await Product.find({}); 
 
     return new Response(JSON.stringify(products), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+    console.error("GET Products Error:", error);
+    return new Response(JSON.stringify({ error: "Failed to fetch products." }), { status: 500 });
   }
 }
 
-// ✅ POST add new product(s)
+/**
+ * @method POST
+ * @description Adds one or more new products using Mongoose.
+ */
 export async function POST(req) {
   try {
-    const client = await clientPromise;
-    const db = client.db("adelaagri_db");
+    await connectDB(); // Use your connection function
     const data = await req.json();
 
-    if (Array.isArray(data)) {
-      await db.collection("products").insertMany(data);
-    } else {
-      await db.collection("products").insertOne(data);
-    }
+    // Mongoose: Product.create() handles both single objects and arrays
+    const newProducts = await Product.create(data); 
 
-    return new Response(JSON.stringify({ success: true, message: "Product(s) added" }), {
+    return new Response(JSON.stringify({ success: true, message: "Product(s) added successfully", data: newProducts }), {
       status: 201,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error inserting product:", error);
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+    console.error("POST Products Error:", error);
+    // 400 status is generally better for validation or input errors
+    return new Response(JSON.stringify({ error: error.message }), { status: 400 }); 
   }
 }
 
-// ✅ DELETE all products (careful!)
+/**
+ * @method DELETE
+ * @description Deletes all products using Mongoose (Careful!).
+ */
 export async function DELETE() {
   try {
-    const client = await clientPromise;
-    const db = client.db("adelaagri_db");
+    await connectDB(); // Use your connection function
 
-    await db.collection("products").deleteMany({});
+    // Mongoose: Delete all documents
+    await Product.deleteMany({}); 
+
     return new Response(JSON.stringify({ success: true, message: "All products deleted" }), {
       status: 200,
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+    console.error("DELETE Products Error:", error);
+    return new Response(JSON.stringify({ error: "Failed to delete products." }), { status: 500 });
   }
 }

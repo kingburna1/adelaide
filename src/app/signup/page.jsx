@@ -117,7 +117,7 @@ export default function SignUpPage() {
           </div>
 
           <p className="text-xs text-gray-400 mb-4 text-center md:text-left">
-            Or <span className="text-blue-500 font-medium hover:underline">Sign up</span> with your email address
+            Or <span className="text-blue-500 font-medium hover:underline hover:cursor-pointer">Sign up</span> with your email address
           </p>
 
           {/* Form Fields */}

@@ -8,7 +8,7 @@ export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
   // 🧠 List of routes where you don’t want footer/header to show
-  const hideOnRoutes = ["/dashboard", "/signin", "/signup", "/adviser"];
+  const hideOnRoutes = ["/dashboard", "/signin", "/signup", "/adviser","/profile"];
 
   // ✅ Check if the current path starts with any of the hidden routes
   const shouldHideLayout = hideOnRoutes.some((path) => pathname.startsWith(path));

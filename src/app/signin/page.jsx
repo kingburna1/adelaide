@@ -5,6 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { signIn } from "next-auth/react";
+import { signOut } from "next-auth/react";
 
 export default function SignInPage() {
   const router = useRouter();
@@ -86,9 +87,22 @@ export default function SignInPage() {
   };
 
   const handleSignOut = async () => {
-    await fetch('/api/auth/signout', { method: 'POST' });
-    toast.success('Signed out successfully');
+    try {
+      // Force logout from Google account too
+      window.open("https://accounts.google.com/Logout", "_blank", "width=500,height=600");
+  
+      // Wait a short moment to let Google logout window trigger
+      setTimeout(async () => {
+        await signOut({
+          callbackUrl: '/signup', // redirect to signup page after full logout
+        });
+        toast.success('Signed out successfully');
+      }, 800);
+    } catch (error) {
+      toast.error('Failed to sign out.');
+    }
   };
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4 sm:p-6">
@@ -143,7 +157,7 @@ export default function SignInPage() {
             </div>
 
             <div className="text-xs text-gray-400 text-center sm:text-left">
-              Or <span className="text-indigo-600 font-medium hover:underline">sign</span> in with your email address
+              Or <span className="text-indigo-600 font-medium hover:underline hover:cursor-pointer">signin</span>  with your email address
             </div>
           </div>
 

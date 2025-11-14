@@ -21,7 +21,7 @@ const page = () => {
   return (
     <main>
       <div>
-        <NaveBarComponent />
+        {/* <NaveBarComponent /> */}
       </div>
       <div className="px-20">
         <section className="flex items-center justify-between w-full px-8 py-6 bg-white">
