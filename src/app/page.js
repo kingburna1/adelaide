@@ -27,7 +27,7 @@ export default function Home() {
       </div>
 
       {/*CommitmentComponent overlaps hero slightly */}
-      <div className="relative z-40 md:-mt-[30px]">
+      <div className="relative z-40  md:-mt-[10px]">
         <CommitmentComponent />
       </div>
 

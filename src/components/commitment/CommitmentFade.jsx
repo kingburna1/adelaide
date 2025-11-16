@@ -12,17 +12,17 @@ const CommitmentSlide = () => {
     {
       title: "Our Mission",
       text: "Our mission is to empower our customers by delivering the highest quality plants and innovative solutions tailored to their specific needs.",
-      bg: "bg-yellow-400/20",
+      bg: "bg-yellow-400/60",
     },
     {
       title: "Our Vision",
       text: "We envision a greener world where sustainable farming and innovation work hand in hand to create a better future for all.",
-      bg: "bg-green-400/20",
+      bg: "bg-green-400/60",
     },
     {
       title: "Our Values",
       text: "We value sustainability, integrity, and growth — nurturing both nature and people to achieve lasting impact.",
-      bg: "bg-cyan-400/20",
+      bg: "bg-cyan-400/60",
     },
   ];
 

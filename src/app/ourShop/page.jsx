@@ -7,20 +7,23 @@ import LatestProduct from "@/components/latestProduct/LatestProduct";
 import latestProduct from "@/utils/latestProduct";
 import ProductCard from "@/components/products/ProductCard";
 import productsData from "@/utils/productsData";
+import SmNavBar from "@/components/smnavbsr/SmNavBar";
 
 const page = () => {
   const [price, setPrice] = useState(100.0);
   return (
     <main>
       <div>
-        <div className="relative w-full h-auto md:h-screen">
-          <HeroShop />
+      <div className="relative w-full h-auto md:h-screen">
+        <HeroShop/>
 
-          {/*  Navbar positioned at the top */}
-          <div className="absolute top-0 left-0 w-full z-50">
-            <NaveBarComponent />
-          </div>
+        {/*  Navbar positioned at the top */}
+        <div className="absolute top-0  left-0 w-full z-50">
+          <div className="hidden md:block"> <NaveBarComponent /></div>
+          <div  className="block md:hidden" > <SmNavBar/> </div>
+        
         </div>
+      </div>
 
         <section className="mt-1  grid grid-cols-1 md:grid-cols-3  gap-5 px-5 md:px-10 md:mt-30 w-full">
           <div className="col-span-1 md:col-span-2   px-3  py-2 md:py-10  h-auto">
@@ -45,8 +48,18 @@ const page = () => {
 
 
 
-           <div className="flex flex-wrap mt-5 md:mt-10 gap-4 md:gap-40 w-full ">
-              {productsData?.slice(0, 6).map ((items) =>(<ProductCard key={items.id} products={items} />))} 
+           <div className="  grid                
+
+    grid-cols-1      
+
+    lg:grid-cols-2   
+
+    gap-4             
+
+    mt-5 md:mt-10       
+
+    w-full ">
+              {productsData?.slice(0, 9).map ((items) =>(<ProductCard key={items.id} products={items} />))} 
            </div>
 
              <div className="flex justify-center items-center mt-5">

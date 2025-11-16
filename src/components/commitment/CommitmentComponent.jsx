@@ -5,15 +5,15 @@ import CommitmentFade from './CommitmentFade'
 
 const CommitmentComponent = () => {
   return (
-    <div className="relative w-full h-auto">
+    <div className="relative w-full ">
       {/* Main container */}
       <div className="relative flex flex-col md:flex-row items-center w-full px-4 md:px-10 z-10 gap-6 md:gap-4">
         {/* Left section (text + image on md+) */}
-        <div className="relative w-full md:w-2/3 flex items-center backdrop-blur-md white/50 p-5 rounded-2xl shadow-md ">
+        <div className="relative w-full h-fit md:w-2/3 flex items-center backdrop-blur-md white/70 p-5 rounded-2xl shadow-md ">
           <div className="w-full flex flex-col md:flex-row items-start md:items-center">
             {/* Text block */} 
             <div className="w-full md:w-1/2 z-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-black">
+              <h3 className="text-2xl md:text-3xl font-bold text-white">
                 Feeding The World <br className="block" />With Consistency.
               </h3>
 

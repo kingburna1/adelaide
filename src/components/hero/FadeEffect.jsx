@@ -43,7 +43,7 @@ const FadeEffect = () => {
             subtitle: "We conduct our business with integrity.",
           },
         ].map((slide, i) => (
-          <SwiperSlide key={i} className="relative">
+          <SwiperSlide key={i} className="relative ">
             {/* Background Image */}
             <img
               src={slide.img}
@@ -61,23 +61,23 @@ const FadeEffect = () => {
               </p>
 
               {/* Title */}
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug mt-4 max-w-4xl drop-shadow-lg">
+              <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold leading-snug mt-4 max-w-4xl drop-shadow-lg">
                 {slide.title}
               </h1>
 
               {/* Subtext */}
-              <p className="mt-3 max-w-3xl text-sm sm:text-base md:text-xl font-normal drop-shadow-md px-2">
+              <p className="mt-2 max-w-3xl text-sm sm:text-base md:text-xl font-normal drop-shadow-md px-2">
                 Our Agriculture businesses deliver agronomic advice, services, and inputs to livestock, fruit, and vegetable supply chains.
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8">
-                <button className="flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-800 hover:bg-white text-white hover:text-green-800 font-semibold text-sm sm:text-lg rounded-md shadow-lg transition duration-300 ease-in-out group">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4 ">
+                <button className="flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-800 hover:bg-white text-white hover:text-green-800 font-semibold text-sm sm:text-lg rounded-md shadow-lg transition duration-300 ease-in-out group ">
                   Explore Our Services
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
 
-                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-cyan-500 text-green-800 hover:text-white font-semibold text-sm sm:text-lg rounded-md shadow-lg transition duration-300 ease-in-out border-2 border-white">
+                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-yellow-500 text-green-800 hover:text-white font-semibold text-sm sm:text-lg rounded-md shadow-lg transition duration-300 ease-in-out border-2 border-white">
                   Contact Us
                 </button>
               </div>

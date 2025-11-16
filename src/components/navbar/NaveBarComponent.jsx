@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import React from "react";
 
@@ -69,7 +70,7 @@ const NaveBarComponent = () => {
                 priority
               />
             </li>
-            <li className="font-bold text-3xl">Adela</li>
+            <Link href="/" className="font-bold text-3xl">Adela</Link>
           </ul>
 
           {/* Menu items */}
@@ -112,12 +113,12 @@ const NaveBarComponent = () => {
                     {/* Dropdown content (APPLYING FIX HERE) */}
                     {item === "Services" && (
                       <div className="p-4 space-y-3 text-gray-700">
-                        <h4 className="font-semibold text-green-800 border-b pb-1">
+                        <Link  href="/allServices" className="font-semibold text-green-800 border-b pb-1">
                           Our Services
-                        </h4>
+                        </Link>
                         <ul className="space-y-2">
                           {/* Corrected item structure */}
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          <Link  href="/allServices" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -126,8 +127,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Agricultural Consulting
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link  href="/allServices" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -136,8 +137,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Soil Regeneration
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link    href="/allServices" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -146,7 +147,7 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Farm Automation
-                          </li>
+                          </Link>
                         </ul>
                       </div>
                     )}
@@ -157,7 +158,7 @@ const NaveBarComponent = () => {
                           Our Projects
                         </h4>
                         <ul className="space-y-2">
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          <Link href="ourProjects" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -166,8 +167,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Agroforestry Expansion
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link   href="ourProjects" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -176,8 +177,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Sustainable Water Systems
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link >
+                          <Link   href="ourProjects" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -186,7 +187,7 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Climate-smart Farming
-                          </li>
+                          </Link>
                         </ul>
                       </div>
                     )}
@@ -237,7 +238,7 @@ const NaveBarComponent = () => {
                           Shop Categories
                         </h4>
                         <ul className="space-y-2">
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          <Link href="ourShop" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -246,8 +247,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Organic Seeds
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link href="ourShop" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -256,8 +257,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Farming Tools
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link href="ourShop" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -266,7 +267,7 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Eco Fertilizers
-                          </li>
+                          </Link>
                         </ul>
                       </div>
                     )}
@@ -277,7 +278,7 @@ const NaveBarComponent = () => {
                           Explore Pages
                         </h4>
                         <ul className="space-y-2">
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          <Link href="ourBlog" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -286,8 +287,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             About Us
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link  href="ourBlog" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -296,8 +297,8 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Blog
-                          </li>
-                          <li className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
+                          </Link>
+                          <Link href="ourBlog" className="group hover:text-cyan-600 flex items-center gap-1 transition-colors duration-300 cursor-pointer">
                             <ArrowRight size={16} 
                               className="
                                 transition-all duration-300 ease-out 
@@ -306,7 +307,7 @@ const NaveBarComponent = () => {
                               "
                             /> 
                             Contact
-                          </li>
+                          </Link>
                         </ul>
                       </div>
                     )}
