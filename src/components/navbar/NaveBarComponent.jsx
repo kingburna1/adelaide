@@ -57,7 +57,7 @@ const NaveBarComponent = () => {
         </div>
 
         {/* Main navbar (UNCHANGED) */}
-        <div className="w-full border-b border-white shadow-md flex items-center text-green-800 font-semibold px-3 relative">
+        <div className="w-full  shadow-md flex items-center text-green-800 font-semibold px-3 relative">
           {/* Logo (UNCHANGED) */}
           <ul className="flex space-x-4 items-center flex-1 p-2">
             <li>
