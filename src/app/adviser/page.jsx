@@ -90,34 +90,43 @@ const App = () => {
     setFormData(prev => ({ ...prev, selectedSoil: "I don't know my soil type." }));
   };
 
-  const handleGenerateReport = () => {
-    const { email, fullName, location, farmingType, crop, selectedSoil } = formData;
-
-    // ✅ Check for missing required fields
+  const handleGenerateReport = async () => {
     if (!email || !fullName || !location || !farmingType || !crop || !selectedSoil) {
-      toast.error('⚠️ Please fill in all required fields before generating your report!', {
-        position: 'top-center',
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
+      toast.error("Please fill in all required fields");
       return;
     }
-
-    // ✅ If all fields filled, proceed
-    setFormData(prev => ({
-      ...prev,
-      error: null,
-      reportData: `AI-generated report for ${fullName} on ${crop} farming at ${location}.`,
-    }));
-
-    toast.success('✅ Report generated successfully! Check below or your email.', {
-      position: 'top-center',
-      autoClose: 3000,
+  
+    toast.info("Generating your report...");
+  
+   
+    const payload = {
+      email,
+      fullName,
+      location,
+      farmingType,
+      crop,
+      selectedSoil,
+      observations,
+      userId
+    };
+  
+    const res = await fetch("/api/generate-report", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),   // ← FIX HERE
     });
+  
+    const data = await res.json();
+  
+    if (res.ok) {
+      setFormData(prev => ({ ...prev, reportData: data.reportHtml }));
+      toast.success("Your AI report has been generated and sent to your email!");
+    } else {
+      toast.error(data.error || "Something went wrong");
+    }
   };
+  
+  
 
   const { selectedSoil, email, fullName, location, farmingType, crop, observations, reportData, userId } = formData;
 
